@@ -40,9 +40,9 @@ def validate_capital_letter(sentence):
 def validate_number_full_stops(sentence):
     # Only one full stop allowed, at end of string
     length = len(sentence)
-    first_period = sentence.find('.')
-    if ( first_period != length-1):
-        raise Exception("invalid character \'.\' at position " + str(first_period+1) + " - this character is only valid at end of sentence")
+    num_periods = sentence.count('.')
+    if ( num_periods > 1 ):
+        raise Exception("invalid number of periods [" + str(num_periods) + "] - only one is allowed, at end of sentence")
 
 def validate_number_of_quotation_marks(sentence):
     # Quotation marks must be an even number
@@ -126,6 +126,10 @@ def main():
     if args.sentence:
         # Operate on one sentence supplied on cmd line
         lines.append(args.sentence)
+
+    if not args.file and not args.sentence:
+        parser.print_usage()
+        sys.exit(1)
 
     time1 = datetime.now()
 
