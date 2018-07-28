@@ -6,9 +6,9 @@ The ruleset adhered to is as follows:
 
 - String starts with a capital letter
 - String has an even number of quotation marks
-- String ends with a period character ."
+- String ends with a period character ."
 - String has no period characters other than the last character 
-- Numbers below 13 are spelled out (one, two, "three, etc)
+- Numbers below 13 are spelled out (one, two, "three, etc)
 
 ## Pre-requisites
 
@@ -31,8 +31,8 @@ An installation of Java is required before usage. Also required are installation
 #### # bin/ValidSentencePython
 
 *usage: 
- -f,--file <arg>       path and filename containing a batch of sentences to parse
- -s,--sentence <arg>   individual sentence to parse*
+* -f,--file <arg>       path and filename containing a batch of sentences to parse
+* -s,--sentence <arg>   individual sentence to parse*
 
 A file of sample sentences are supplied in the file InputFile.txt so the following is an example:
 
@@ -52,8 +52,8 @@ A file of sample sentences are supplied in the file InputFile.txt so the followi
 #### # bin/ValidSentenceJava
 
 *usage: 
- -f,--file <arg>       path and filename containing a batch of sentences to parse
- -s,--sentence <arg>   individual sentence to parse*
+* -f,--file <arg>       path and filename containing a batch of sentences to parse
+* -s,--sentence <arg>   individual sentence to parse*
 
 A file of sample sentences are supplied in the file InputFile.txt so the following is an example:
 
