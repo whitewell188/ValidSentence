@@ -15,6 +15,14 @@ public class ValidateFullStops implements ValidationPlugin {
     
     public boolean validate(String str) {
         s = new StringBuilder();
+        if ( str == null || str.length() == 0 ){
+            s.append("string is not valid");
+            return false;
+        }
+        if ( str == null || str.length() == 0 ){
+            s.append("string is not valid");
+            return false;
+        }
         boolean outcome = true;
         if ( str.endsWith(".") == false ) {
             outcome = false;

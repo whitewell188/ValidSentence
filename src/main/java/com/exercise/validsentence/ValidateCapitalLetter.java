@@ -14,7 +14,13 @@ public class ValidateCapitalLetter implements ValidationPlugin {
     StringBuilder s;
     
     public boolean validate(String str) {
+        
         s = new StringBuilder();
+        if ( str == null || str.length() == 0 ){
+            s.append("string is not valid");
+            return false;
+        }
+        
         if ( Character.isUpperCase(str.charAt(0))){
             return true;
         } else {

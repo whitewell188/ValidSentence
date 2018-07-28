@@ -53,7 +53,7 @@ def validate_number_of_quotation_marks(sentence):
 def validate_number_usage(sentence):
     # Numbers below 13 are spelled out
     # Use regex
-    numbers = re.findall(r'\d+', sentence)
+    numbers = re.findall(r'-?\d+', sentence)
     error_strings = []
     valid=True
     for number in numbers:
