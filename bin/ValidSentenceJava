@@ -1,0 +1,5 @@
+#!/bin/sh
+
+fullpath=`realpath $0`
+bindir=`dirname $fullpath`
+java -jar $bindir/../target/ValidSentence-1.0.jar "$@"
