@@ -2,4 +2,4 @@
 
 fullpath=`realpath $0`
 bindir=`dirname $fullpath`
-python $bindir/../src/python/ValidSentence.py "$@"
+python3 $bindir/../src/python/ValidSentence.py "$@"
