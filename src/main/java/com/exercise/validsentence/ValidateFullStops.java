@@ -1,18 +1,21 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+// Plugin validator to examine the period character(s) in a string.
+// Only one period character is valid and it must be the last character
 package com.exercise.validsentence;
 
 /**
  *
  * @author nward
+ * 
  */
 public class ValidateFullStops implements ValidationPlugin {
     
     StringBuilder s;
     
+    /**
+     *
+     * @return true if validation rule is met, false otherwise
+     * 
+     */
     public boolean validate(String str) {
         s = new StringBuilder();
         if ( str == null || str.length() == 0 ){

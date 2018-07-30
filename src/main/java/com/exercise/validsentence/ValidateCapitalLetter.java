@@ -1,8 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+// Plugin validator to ensure the input string begins with a capital letter [A-Z]
+
 package com.exercise.validsentence;
 
 /**
@@ -13,6 +10,11 @@ public class ValidateCapitalLetter implements ValidationPlugin {
     
     StringBuilder s;
     
+    /**
+     *
+     * @return true if validation rule is met, false otherwise
+     * 
+     */
     public boolean validate(String str) {
         
         s = new StringBuilder();

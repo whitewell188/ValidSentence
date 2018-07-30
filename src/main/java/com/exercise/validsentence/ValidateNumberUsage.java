@@ -1,8 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+// Plugin validator to examine numeric characters in a string. Any numeric
+// characters less than a specified number must be spelled out in words
+
 package com.exercise.validsentence;
 
 import java.util.regex.Matcher;
@@ -11,12 +9,18 @@ import java.util.regex.Pattern;
 /**
  *
  * @author nward
+ * 
  */
 public class ValidateNumberUsage implements ValidationPlugin {
     
     StringBuilder s;
     int lowest_allowed_numeric = 13;
     
+    /**
+     *
+     * @return true if validation rule is met, false otherwise
+     * 
+     */
     public boolean validate(String str) {
         s = new StringBuilder();
         if ( str == null || str.length() == 0 ){

@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+// Interface class that defines the functions plugins need to fulfill
 package com.exercise.validsentence;
 
 /**
@@ -11,7 +7,18 @@ package com.exercise.validsentence;
  */
 public interface ValidationPlugin {
     
+    /**
+     *
+     * @return true if validation rule is met, false otherwise
+     * 
+     */
     boolean validate(String str);
+    
+    /**
+     *
+     * @return any error strings created during validation
+     * 
+     */
     String getResult();
     
 }

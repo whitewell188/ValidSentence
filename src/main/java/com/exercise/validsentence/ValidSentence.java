@@ -60,6 +60,10 @@ public class ValidSentence {
             System.exit(1);
         }
       
+        // Build up a list of plugins that will be applied to the string(s).
+        // This could/shiould be extended to dynamically discover plugins 
+        // to allow extensibility. Precedence and execution filters could also
+        // be added
         ArrayList<ValidationPlugin> plugin_list = new ArrayList<ValidationPlugin>();
         plugin_list.add(new ValidateCapitalLetter());
         plugin_list.add(new ValidateFullStops());
@@ -68,6 +72,8 @@ public class ValidSentence {
         
         long start = System.nanoTime();
         
+        // For each of the input sentences call each of the plugin validators.
+        // Gather the total error messages for display
         int num_valid_strings = lines.size();
         for (int i = 0; i < lines.size(); i++) {
             if ( lines.get(i).length() == 0){
